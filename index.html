@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cafe Finder</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <main class="app">
+      <header class="top">
+        <div>
+          <h1>☕ Cafe Finder</h1>
+          <p class="subtitle">Find cafes near you, fast.</p>
+        </div>
+
+        <div class="hint" id="hint">Tip: use “Use my location” first.</div>
+      </header>
+
+      <section class="panel">
+        <div class="controls">
+          <button id="locateBtn" class="btn primary">Use my location</button>
+          <button id="findBtn" class="btn" disabled>Find cafes</button>
+
+          <label class="toggle">
+            <input type="checkbox" id="openNowToggle" />
+            <span>Open now</span>
+          </label>
+        </div>
+
+        <div class="layout">
+          <div class="map-wrap">
+            <div id="map"></div>
+          </div>
+
+          <aside class="results">
+            <div class="results-head">
+              <h2>Results</h2>
+              <span class="muted" id="count"></span>
+            </div>
+
+            <ol id="resultsList" class="results-list"></ol>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClF0itqYw31L3Qp5uukpgJIalCygjIYOs&libraries=places&v=weekly"
+      async
+      defer
+    ></script>
+  </body>
+</html>
